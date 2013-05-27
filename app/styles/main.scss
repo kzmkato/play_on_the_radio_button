@@ -1,0 +1,29 @@
+@import "compass_twitter_bootstrap";
+	input#confirm,label[for=confirm]{
+	display: none;
+	}
+	.text{
+		display: none;
+		border: 1px solid #aaa;
+		padding: 2em;
+		margin: 1em;
+		p{
+			border-bottom: 1px solid #eee;
+		}
+	}
+	input#alert:checked {
+		~label[for=alert]{
+			color: #f00;
+		}
+		~input#confirm, ~ label[for=confirm]{
+			display: block;
+		}
+	}
+	input#confirm:checked{
+		~ label[for=confirm]{
+			color: #f00;
+		}
+		 ~ .text{
+		display: block
+		}
+	}
